@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gabbs Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="mirko.jpeg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif;}
+        body {background-color: white !important;}
+        .w3-theme {color: #fff !important; background-color: #000066 !important} /* Azul Escuro */
+        .w3-theme-l1 {background-color: #004080 !important} /* Azul Escuro Claro */
+        .w3-theme-l2 {background-color: #004d99 !important} /* Azul Escuro Mais Claro */
+        .w3-theme-d1 {background-color: #00264d !important} /* Azul Escuro Mais Escuro */
+        .w3-theme-d2 {background-color: #001a33 !important} /* Azul Escuro Profundo */
+        .w3-hover-blue-dark:hover {color: #fff !important; background-color: #000066 !important} /* Azul Escuro Profundo */
+        .w3-sidebar {z-index: 3; width: 250px; top: 43px; bottom: 0; height: inherit; background-color: #000066 !important;}
+        .w3-button {background-color: #000066 !important; color: white !important;}
+        .w3-bar-item.w3-button {color: white !important;}
+        .w3-padding-32, .w3-padding-64 {background-color: #0000665b !important;} /* Azul Escuro Claro */
+        .w3-main {background-color: white !important; margin-left: 250px;}
+        .w3-main {background: white;}
+        .banner {
+            position: relative;
+            color: white;
+            width: 100%;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        .banner h1 {
+            position: absolute;
+            bottom: 0px;
+            left: 20px;
+            margin: 0;
+        }
+        #myFooter{
+            background: #000066;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-purple w3-large w3-theme-l1"
+                href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="/index.html" class="w3-bar-item w3-button w3-theme-l1"><img id="mirko" src="../img/mirko.jpeg" width="35px"
+                    border-radius="5px" /></a>
+            <a href="/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-purple">Inicio</a>
+            <a href="/pages/att.html" class="w3-bar-item w3-button w3-hide-small w3-hover-purple">Atualizações</a>
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Menu</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-purple" href="/tododeku.html">TodoDeku</a>
+    </nav>
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:250px">
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <div class="banner">
+                    <img src="../img/" alt="Banner Image">
+                </div>
+            </div>
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Sinopse:</h1>
+                <p>Adaptação do filme "Barbie: Moda e Magia".</p>
+                <i>Arte da capa/banner feita por mim, Gabbs.</i>
+            </div>
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        </div>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Link:</h1>
+                <a href="">Apelidos - AU</a>
+            </div>
+            <div class="w3-third w3-container">
+                <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+                <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+            </div>
+        </div>
+        <footer id="myFooter">
+            <div class="w3-container w3-theme-l2 w3-padding-32">
+                <h4>Todos os direitos reservados.</h4>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var mySidebar = document.getElementById("mySidebar");
+        var overlayBg = document.getElementById("myOverlay");
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
